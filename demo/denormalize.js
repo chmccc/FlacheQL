@@ -26,7 +26,7 @@ const test = {
 function denormalize(pathsObject) {
   const payload = {};
   for (let key in pathsObject) {
-    workingObj = payload;
+    let workingObj = payload;
     let path = key.split('.');
     for (let i = 1; i < path.length; i += 1) {
       const e = path[i];
